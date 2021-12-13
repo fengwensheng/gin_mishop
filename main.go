@@ -7,7 +7,8 @@ import (
 
 func main() {
 	r := gin.Default()
-	r.LoadHTMLGlob("template/*")
-	routes.IndexRouteInit(r)
+	r.LoadHTMLGlob("template/**/**/*")
+	r.Static("/static", "./static")
+	routes.AdminRouteInit(r)
 	r.Run()
 }
