@@ -10,9 +10,9 @@ type LoginController struct {
 	BaseController
 }
 
-func (lc LoginController) Index(c *gin.Context) {
+func (ctr LoginController) Index(c *gin.Context) {
 	c.HTML(http.StatusOK, "admin/login/login.html", gin.H{})
 }
-func (lc LoginController) DoLogin(c *gin.Context) {
+func (ctr LoginController) DoLogin(c *gin.Context) {
 	c.String(http.StatusOK, "admin doLogin")
 }
